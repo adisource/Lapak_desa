@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/medium_Textview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:padding="16dp"
+        android:src="@drawable/btn"
+        android:text="Ulasan Pesanan"
+        android:textColor="@color/dark_text"
+        android:textSize="17dp"
+        android:textStyle="bold" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btn"
+        android:layout_below="@+id/medium_Textview">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#dfdfdf"></LinearLayout>
+
+
+            <TextView
+                android:id="@+id/total_belanja"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:padding="12dp"
+                android:src="@drawable/btn"
+                android:text="-"
+                android:textColor="@color/dark_dark"
+                android:textSize="14dp" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/corner_layout"
+                android:elevation="4dp"
+                android:orientation="vertical"
+                android:padding="12dp">
+                <GridLayout
+                    android:layout_width="match_parent"
+                    android:columnCount="3"
+                    android:rowCount="4"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:layout_row="0"
+                        android:textColor="@color/black"
+                        android:layout_column="0"
+                        android:text="Pesananan"/>
+                    <TextView
+                        android:layout_row="0"
+                        android:layout_column="1"
+                        android:textColor="@color/black"
+                        android:paddingHorizontal="10dp"
+                        android:text=":" />
+                    <TextView
+                        android:layout_row="0"
+                        android:layout_column="2"
+                        android:textColor="@color/black"
+                        android:paddingHorizontal="20dp"
+                        android:id="@+id/jam_pesan"
+                        android:text="-"/>
+
+                    <TextView
+                        android:layout_row="1"
+                        android:textColor="@color/black"
+                        android:layout_column="0"
+                        android:text="Pengiriman"
+                        />
+                    <TextView
+                        android:layout_row="1"
+                        android:layout_column="1"
+                        android:textColor="@color/black"
+                        android:paddingHorizontal="10dp"
+                        android:text=":"
+                        />
+                    <TextView
+                        android:layout_row="1"
+                        android:layout_column="2"
+                        android:textColor="@color/black"
+                        android:paddingHorizontal="20dp"
+                        android:text="-"
+                        />
+
+
+                </GridLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginBottom="12dp"
+                    android:background="#cfcfcf"></LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:layout_marginBottom="10dp"
+                    android:text="Payable"
+                    />
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/list_ulasan"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginBottom="12dp"
+                    android:background="#cfcfcf"></LinearLayout>
+                <GridLayout
+                    android:layout_width="match_parent"
+                    android:columnCount="3"
+                    android:rowCount="3"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:textColor="@color/black"
+                        android:layout_column="0"
+                        android:layout_row="0"
+                        android:text="Ongkir "
+                        />
+                    <TextView
+
+                        android:text=":"
+                        android:paddingHorizontal="10dp"
+                        android:layout_row="0"
+                        android:layout_column="1"
+                        />
+                    <LinearLayout
+                        android:layout_column="2"
+                        android:layout_row="0"
+                        android:orientation="horizontal"
+                        >
+                        <TextView
+                            android:textColor="@color/black"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Rp."
+                            />
+                        <TextView
+
+                            android:textColor="@color/black"
+                            android:id="@+id/ongkir"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="-"
+                            />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:textColor="@color/black"
+                        android:layout_column="0"
+                        android:layout_row="1"
+                        android:text="Total Pembayaran "
+                        />
+                    <TextView
+
+                        android:text=":"
+                        android:paddingHorizontal="10dp"
+                        android:layout_row="1"
+                        android:layout_column="1"
+                        />
+                    <LinearLayout
+                        android:layout_column="2"
+                        android:layout_row="1"
+                        android:orientation="horizontal"
+                        >
+                        <TextView
+                            android:textColor="@color/black"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Rp."
+                            />
+                        <TextView
+                            android:textColor="@color/black"
+                            android:id="@+id/total_pembayaran"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="-"
+                            />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:textColor="@color/black"
+                        android:layout_column="0"
+                        android:layout_row="2"
+                        android:text="Metode pembayaran"
+                        />
+
+                    <TextView
+                        android:id="@+id/metode_pembayaran"
+                        android:text=":"
+                        android:paddingHorizontal="10dp"
+                        android:layout_row="2"
+                        android:layout_column="1"
+                        />
+                    <LinearLayout
+                        android:layout_column="2"
+                        android:layout_row="2"
+                        android:orientation="horizontal"
+                        >
+                        <TextView
+                            android:textColor="@color/black"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="COD/bayar ditempat"
+                            >
+                        </TextView>
+
+                    </LinearLayout>
+
+
+                </GridLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginBottom="12dp"
+                    android:background="#cfcfcf"></LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="4dp">
+
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_weight="1"
+                        android:src="@drawable/btn"
+                        android:text="Alamat Pesanan:"
+                        android:textColor="@color/dark_dark"
+                        android:textSize="12dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:gravity="center"
+                        android:src="@drawable/btn"
+                        android:text="Edit"
+                        android:textColor="@color/dark_dark"
+                        android:textSize="12dp" />
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginTop="6dp"
+                    android:gravity="center"
+                    android:text="Wahyu Nanang"
+                    android:textColor="@color/black"
+                    android:textSize="13dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginTop="2dp"
+                    android:gravity="center"
+                    android:text="RT.01, RW.03, Dusun Kuyang"
+                    android:textColor="@color/black"
+                    android:textSize="13dp" />
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipToPadding="false"
+                android:divider="#fff"
+                android:dividerHeight="0dp"
+                android:scrollbars="none" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:padding="18dp"
+                android:src="@drawable/btn"
+                android:text="Terimakasih sudah melakukan perbelanjaan melalui Aplikasi ini sebagai usaha kita mengurangi penuralan COVID-19"
+                android:textColor="@color/dark_dark"
+                android:textSize="13dp" />
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+    <TextView
+        android:id="@+id/btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@color/dark_dark"
+        android:gravity="center"
+        android:padding="16dp"
+        android:src="@drawable/btn"
+        android:text="PROSES"
+        android:textColor="@color/white"
+        android:textSize="15dp" />
+
+    <FrameLayout
+        android:id="@+id/frameLoading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/circle" />
+
+        <ImageView
+            android:id="@+id/loadingImage"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:layout_gravity="center"
+            android:src="@drawable/loading" />
+
+
+    </FrameLayout>
+
+
+</RelativeLayout>

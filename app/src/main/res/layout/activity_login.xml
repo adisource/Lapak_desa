@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    tools:context=".LoginActivity">
+
+    <LinearLayout
+        android:id="@+id/topbar"
+        android:background="@color/dark_dark"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:gravity="center_vertical">
+
+        <include layout="@layout/topbar_login"/>
+
+    </LinearLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="20dp"
+            android:paddingTop="10dp"
+            android:paddingRight="20dp"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/circularbordersolid"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="Bersama Melawan COVID-19"
+                        android:textSize="17sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical">
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center_vertical"
+                        android:paddingRight="8dp">
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:background="@drawable/circular_grey_bordersolid"
+                            android:padding="10dp"
+                            android:src="@drawable/ic_favorite_black_24dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:fontFamily="@font/roboto_regular"
+                            android:text="Gunakan layanannya untuk mempermudah pemenuhan kebutuhan anda"
+                            android:textColor="@color/darkblue"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/circularbordersolid"
+                android:orientation="vertical">
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp"
+                            android:src="@drawable/logo_ft" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:fontFamily="@font/roboto_regular"
+                            android:text="Powered By Universitas Hamzanwadi"
+                            android:textColor="@color/darkblue"
+                            android:textSize="15sp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginLeft="18dp"
+                            android:layout_marginRight="18dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/round_border">
+
+                            <EditText
+                                android:id="@+id/nik"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="#FAFAFA"
+                                android:hint="NIK"
+                                android:padding="15dp"
+                                android:inputType="numberSigned|textAutoComplete"
+                                android:textSize="13dp" />
+
+                        </LinearLayout>
+                        <!--
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="18dp"
+                            android:layout_marginRight="18dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="15dp"
+                            android:background="@drawable/round_border">
+
+                            <EditText
+                                android:id="@+id/nama"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="#FAFAFA"
+                                android:hint="NAMA"
+                                android:padding="15dp"
+                                android:inputType="textAutoComplete"
+                                android:textSize="13dp" />
+
+                        </LinearLayout> -->
+
+
+                        <TextView
+                            android:id="@+id/login"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Login"
+                            android:textAllCaps="false"
+                            android:textColor="#ffffff"
+                            android:padding="15dp"
+                            android:gravity="center"
+                            android:layout_gravity="center"
+                            android:background="@drawable/rounded_button"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"/>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_gravity="center"
+                            android:orientation="horizontal"
+                            android:layout_height="match_parent">
+                            <TextView
+                                android:textColor="@color/black"
+                                android:fontFamily="@font/roboto_regular"
+                                android:text="Belum mempunyai akun silakan"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                            <TextView
+                                android:id="@+id/daftar"
+                                android:fontFamily="@font/roboto_regular"
+                                android:textColor="@color/dark_blue"
+                                android:layout_width="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:text="Daftar"
+                                android:layout_height="wrap_content"/>
+
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/kembali"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Kembali"
+                            android:padding="15dp"
+                            android:gravity="center"
+                            android:layout_gravity="center"
+                            android:background="@drawable/rounded_button2"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            android:textAllCaps="false"
+                            android:layout_marginBottom="20dp"
+                            />
+
+                    </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+
+</LinearLayout>
